@@ -58,11 +58,11 @@ Here is the folder structure of the project:
 │   │   └── style.css              # Dashboard styling
 │   ├── frames/                    # Extracted frames from uploaded media
 │   ├── js/
-│   │   └── script.js              # Frontend logic (media display, zoom, etc.)
+│   │   └── script.js              # Frontend logic (media display, zoom,                                         etc.)
 │   └── uploads/                   # Uploaded raw media files
 ├── templates/
 │   └── index.html                 # Main dashboard layout (HTML template)
-└── __pycache__/                   # Auto-generated Python bytecode cache
+               
 
 ---
 
