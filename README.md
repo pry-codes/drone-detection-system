@@ -45,7 +45,7 @@ Here is the folder structure of the project:
 
 ├── app.py                         # Flask backend server
 ├── detector.py                    # YOLOv8 object detection logic
-├── download_model.py              # Script to download YOLOv8n base model
+├── downloadBaseModel.py              # Script to download YOLOv8n base model
 ├── downloadCustomModel.py         # Script to download the custom-trained                                        model
 ├── requirements.txt               # Required Python dependencies
 ├── models/                       
