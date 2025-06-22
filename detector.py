@@ -21,7 +21,11 @@ class ObjectDetector:
             print(f"❌ Input folder not found: {input_folder}")
             return
 
-        image_files = [f for f in os.listdir(input_folder) if f.lower().endswith((".jpg", ".jpeg", ".png"))]
+        image_files = sorted([
+            f for f in os.listdir(input_folder)
+            if f.lower().endswith((".jpg", ".jpeg", ".png"))
+        ])[:10]
+
 
         if not image_files:
             print(f"❌ No image files found in: {input_folder}")
