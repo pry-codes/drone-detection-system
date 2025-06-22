@@ -1,0 +1,7 @@
+Flask
+ultralytics
+torch
+opencv-python
+pillow
+imageio
+requests
