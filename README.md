@@ -43,22 +43,26 @@ The frontend is built with:
 
 Here is the folder structure of the project:
 
-video\_frame\_extractor
-├── `app.py` — the Flask backend
-├── `detector.py` — contains YOLOv8 object detection logic
-├── `downloadCustomModel.py` — script to download the YOLO model
-├── `models/` — contains the YOLOv8 model (`2_best.pt`)
-├── `static/`
-│   ├── `uploads/` — for uploaded media
-│   ├── `frames/` — stores extracted frames
-│   ├── `annotated_frames/` — stores detection results
-│   ├── `css/` — contains `style.css`
-│   └── `js/` — contains `script.js`
-├── `templates/`
-│   └── `index.html` — the main dashboard UI
-├── `requirements.txt` — Python dependencies
-├── `LICENSE` — MIT License file
-└── `README.md` — this documentation
+├── app.py                         # Flask backend server
+├── detector.py                    # YOLOv8 object detection logic
+├── download_model.py              # Script to download YOLOv8n base model
+├── downloadCustomModel.py         # Script to download the custom-trained                                        model
+├── requirements.txt               # Required Python dependencies
+├── models/                       
+│   ├── 2_best.pt                  # Custom-trained YOLOv8 model (final                                           version)
+│   └── yolov8n.pt                 # Base YOLOv8n model (from Ultralytics)
+
+├── static/                      
+│   ├── annotated_frames/          # YOLO-annotated output images
+│   ├── css/
+│   │   └── style.css              # Dashboard styling
+│   ├── frames/                    # Extracted frames from uploaded media
+│   ├── js/
+│   │   └── script.js              # Frontend logic (media display, zoom, etc.)
+│   └── uploads/                   # Uploaded raw media files
+├── templates/
+│   └── index.html                 # Main dashboard layout (HTML template)
+└── __pycache__/                   # Auto-generated Python bytecode cache
 
 ---
 
