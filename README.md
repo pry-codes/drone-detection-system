@@ -41,24 +41,28 @@ The frontend is built with:
 
 ## 📁 Project Structure
 
-├── app.py                   # Flask backend server
-├── detector.py              # YOLOv8 object detection logic
-├── downloadBaseModel.py     # Script to download YOLOv8n base model
-├── downloadCustomModel.py   # Script to download the custom-trained model
-├── requirements.txt         # Required Python dependencies
+```
+<pre>
+├── app.py                        # Flask backend server
+├── detector.py                  # YOLOv8 object detection logic
+├── downloadBaseModel.py         # Script to download YOLOv8n base model
+├── downloadCustomModel.py       # Script to download the custom-trained model
+├── requirements.txt             # Required Python dependencies
 ├── models/
-│ ├── 2_best.pt              # Custom-trained YOLOv8 model (final version)
-│ └── yolov8n.pt             # Base YOLOv8n model (from Ultralytics)
+│   ├── 2_best.pt                # Custom-trained YOLOv8 model (final version)
+│   └── yolov8n.pt               # Base YOLOv8n model (from Ultralytics)
 ├── static/
-│ ├── annotated_frames/      # YOLO-annotated output images
-│ ├── css/
-│ │ └── style.css            # Dashboard styling
-│ ├── frames/                # Extracted frames from uploaded media
-│ ├── js/
-│ │ └── script.js            # Frontend logic (media display, zoom, etc.)
-│ └── uploads/               # Uploaded raw media files
+│   ├── annotated_frames/        # YOLO-annotated output images
+│   ├── css/
+│   │   └── style.css            # Dashboard styling
+│   ├── frames/                  # Extracted frames from uploaded media
+│   ├── js/
+│   │   └── script.js            # Frontend logic (media display, zoom, etc.)
+│   └── uploads/                 # Uploaded raw media files
 ├── templates/
-│ └── index.html             # Main dashboard layout (HTML template)
+│   └── index.html               # Main dashboard layout (HTML template)
+</pre>
+```
 ---
 
 ## ⚙️ Setup Instructions
