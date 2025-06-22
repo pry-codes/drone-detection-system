@@ -71,8 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
       body: formData,
     })
       .then(async (res) => {
-        progressBar.value = 40;
-        const data = await res.json();
+        let data;
+        try {
+          data = await res.json();
+        } catch (jsonErr) {
+          throw new Error("Server returned an unexpected response (not JSON). Possible crash or misroute.");
+        }
+
         if (!res.ok) throw new Error(data.error || "Upload failed.");
         return data;
       })
@@ -149,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const img = document.createElement("img");
             img.src = `${src}?t=${Date.now()}`;
-            img.classList.add("frame-preview"); // Removed "highlighted"
+            img.classList.add("frame-preview");
             addClickZoom(img);
 
             const label = document.createElement("div");
@@ -171,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1500);
       })
       .catch((err) => {
+        console.error("Error:", err.message);
         fileNameDisplay.textContent = `❌ ${err.message}`;
         detectionSummary.style.display = "none";
         statusMessage.textContent = "❌ Error during processing";
