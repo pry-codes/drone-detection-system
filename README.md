@@ -43,7 +43,7 @@ The frontend is built with:
 
 ```
 <pre>
-├── app.py                        # Flask backend server
+├── app.py                       # Flask backend server
 ├── detector.py                  # YOLOv8 object detection logic
 ├── downloadBaseModel.py         # Script to download YOLOv8n base model
 ├── downloadCustomModel.py       # Script to download the custom-trained model
