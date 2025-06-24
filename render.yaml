@@ -9,4 +9,5 @@ services:
     envVars:
       - key: FLASK_ENV
         value: production
+        healthCheckPath: /health
     autoDeploy: true
