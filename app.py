@@ -81,7 +81,7 @@ def upload_file():
                     reader = imageio.get_reader(filepath)
                     fps = reader.get_meta_data().get("fps", 30)
                     frame_interval = int(fps) if fps > 0 else 30
-                    max_frames = 180
+                    max_frames = 60
                     saved_frame_count = 0
 
                     for i, frame in enumerate(reader):
