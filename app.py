@@ -6,9 +6,11 @@ import uuid
 import imageio
 from PIL import Image
 import shutil
-from detector import ObjectDetector  # ✅ Ensure this class exists
+from detector import ObjectDetector 
 
 app = Flask(__name__)
+
+detector = ObjectDetector(model_path="models/2_best.pt")
 
 # Absolute paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -109,7 +111,6 @@ def upload_file():
             # 🔍 Run YOLO detection
             try:
                 print("🤖 Running YOLOv8 detection...", flush=True)
-                detector = ObjectDetector(model_path="models/2_best.pt")
                 detector.detect_objects_in_folder(
                     input_folder=FRAME_FOLDER,
                     output_folder=ANNOTATED_FOLDER
